@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <title>Tic-Tac-Toe</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe AI</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<main>
-    <h1>tic-toc-toe</h1>
-    <div class="container">
-    <div class="game">
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"> </button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
+  <div class="game-container">
+    <h1 class="title">Tic Tac Toe</h1>
 
+    <div class="controls">
+      <select id="mode-select">
+        <option value="ai">Play with AI</option>
+        <option value="2p">2 Player</option>
+      </select>
+
+      <label class="dark-toggle">
+        🌗 <input type="checkbox" id="darkModeToggle"> Dark Mode
+      </label>
     </div>
+
+    <div class="board">
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
     </div>
-    <button id="reset-btn">Reset Game</button>
-</main>    
+
+    <div class="btn-container">
+      <button id="reset-btn" class="action-btn">🔄 Reset</button>
+      <button id="new-btn" class="action-btn">🆕 New Game</button>
+    </div>
+
+    <div class="scoreboard">
+      <p>X Wins: <span id="x-score">0</span></p>
+      <p>O Wins: <span id="o-score">0</span></p>
+      <p>Draws: <span id="draw-score">0</span></p>
+    </div>
+
+    <div class="msg-container hide">
+      <p id="msg"></p>
+    </div>
+  </div>
+
+  <canvas id="confetti"></canvas>
+  <script src="app.js"></script>
 </body>
-<script src="./App.js"></script>
 </html>
